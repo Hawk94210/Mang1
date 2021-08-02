@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1</title>
+</head>
+<body>
+<h2>Sample Screen:</h2>
+<input type="text" id="ipvalue">
+<button type="button" id="add" onclick="addnumber()">Add</button>
+<button type="button" id="display" onclick="displaynb()">Display</button>
+<hr>
+<div id="shownumber"></div>
+<script>
+    let a = 0;
+    let array = Array();
+
+    function addnumber() {
+        array[a] = document.getElementById("ipvalue").value
+        alert("Nhập giá trị: " + array[a] + "vị trí" + a);
+        a++;
+        document.getElementById("ipvalue").innerText = "";
+    }
+
+    function displaynb() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("shownumber").innerHTML = e;
+    }
+</script>
+</body>
+</html>
