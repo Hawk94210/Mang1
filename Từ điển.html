@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="dich" oninput="nhap()">
+<div id="demo"></div>
+<script>
+    let demo_1 = ["Gà", "Chó", 'Lợn', 'Mèo'];
+    let demo_2 = ['Chicken', 'Dog', 'Pig', 'Cat'];
+    function nhap() {
+        let b = document.getElementById("dich").value
+        for ( let i = 0; i < demo_1.length; i++) {
+            if (b === demo_1[i]) {
+                document.getElementById("demo").innerHTML = demo_2[i]
+            }
+            else if ( b === demo_2[i]) {
+                document.getElementById("demo").innerHTML = demo_1[i]
+            }
+        }
+    }
+</script>
+</body>
+</html>
